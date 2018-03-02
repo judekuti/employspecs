@@ -21,6 +21,15 @@ export class EmployeeService {
           salary: employee.salary
       });
   }
+
+  updateEmployee(employee: Employee){
+      this.employeeList.update(employee.$key, {
+          name: employee.name,
+          position: employee.position,
+          office: employee.office,
+          salary: employee.salary
+      });
+  }
   deleteEmployee($key: string){
       this.employeeList.remove($key);
   }

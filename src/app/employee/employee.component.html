@@ -1,3 +1,26 @@
-<p>
-  employee works!
-</p>
+<form  #employeeForm="ngForm">
+    <div class="form-group">
+        <label for="">
+            Name
+        </label>
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.name" placeholder="full name of employee">
+    </div>
+    <div class="form-group">
+        <label for="">
+            Position
+        </label>
+        <input type="text" class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.position" placeholder="position of employee">
+    </div>
+    <div class="form-group">
+        <label for="">
+            Office
+        </label>
+        <input type="text" class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.office" placeholder="office of employee">
+    </div>
+    <div class="form-group">
+        <label for="">
+            Salary
+        </label>
+        <input type="text" class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.salary" placeholder="full name of employee">
+    </div>
+</form>
