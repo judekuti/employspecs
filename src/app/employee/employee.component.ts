@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from './../employee.service';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-employee',
@@ -13,5 +14,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
   }
+onSubmit(employeeForm: NgForm){
 
+}
 }
