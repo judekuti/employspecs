@@ -20,6 +20,7 @@ export class EmployeeComponent implements OnInit {
 onSubmit(employeeForm: NgForm){
     this.employeeService.insertEmployee(employeeForm.value)
     this.resetForm(employeeForm);
+    this.toastr.success('Submitted Successfully', 'Employee Registered')
 
 }
 resetForm(employeeForm? : NgForm){
