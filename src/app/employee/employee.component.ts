@@ -13,11 +13,13 @@ export class EmployeeComponent implements OnInit {
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+      this.resetForm();
   }
 onSubmit(employeeForm: NgForm){
 
 }
-resetForm(employeeForm: NgForm){
+resetForm(employeeForm? : NgForm){
+    if (employeeForm != null)
     employeeForm.reset();
     this.employeeService.selectedEmployee = {
         $key: null,
