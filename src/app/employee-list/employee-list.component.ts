@@ -17,6 +17,12 @@ export class EmployeeListComponent implements OnInit {
   ngOnInit() {
       var emp = this.employeeService.getData();
       emp.snapshotChanges().subscribe(item=>{
+          this.employeeList = [];
+          item.forEach(element => {
+              var e = element.payload.toJSON();
+              e["$key"] = element.key;
+              this.employeeList.push(e as Employee);
+          })
 
       })
   }
