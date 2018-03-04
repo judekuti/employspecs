@@ -3,7 +3,7 @@
         <label for="">
             Name
         </label>
-        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.name" placeholder="full name of employee">
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.name" placeholder="full name of employee" required>
     </div>
     <div class="form-group">
         <label for="">
@@ -28,7 +28,7 @@
              <input type="text" class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.salary" placeholder="salary of employee">
        </div>
        <div class="form-group">
-           <button class="btn btn-default" type="submit"><i class="fa fa-floppy-o"></i>Submit</button>
+           <button class="btn btn-default" type="submit" [disabled]="!employeeForm.valid"><i class="fa fa-floppy-o"></i>Submit</button>
            <button class="btn btn-default" type="button" (click)="resetForm(employeeForm)"><i class="fa fa-repeat"></i>Reset</button>
        </div>
     </div>

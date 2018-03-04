@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ngdirty{
+    border: 1px solid red;
+}
+
+button:hover,a.btn:hover{
+    cursor: pointer;
+}
+
+button{
+    margin-top: 10px;
+}
